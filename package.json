@@ -1,0 +1,23 @@
+{
+  "name": "junosoft",
+  "version": "1.0.0",
+  "description": "junosoft portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kwibuka/junosoft.git"
+  },
+  "author": "Kwibuka Confiance and Ubanje Albert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kwibuka/junosoft/issues"
+  },
+  "homepage": "https://github.com/Kwibuka/junosoft#readme"
+}
