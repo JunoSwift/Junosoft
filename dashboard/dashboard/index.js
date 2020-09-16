@@ -41,30 +41,49 @@ class LeftNavItem {
   constructor(name) {
     this.name = name;
   }
-  ourWorkHandler = () => {
-    // console.log("Hello");
-    const displayNone = "none";
-    const displayBlock = "block";
+  displayNone = "none";
+  displayBlock = "block";
+  sideNavClickHandler = (toggleSideNavEl, hideTemplateEl, cssClass) => {
+    if (
+      toggleSideNavEl.style.display === this.displayBlock &&
+      hideTemplateEl.style.display === this.displayNone
+    ) {
+      // toggleSideNavEl.style.display = this.displayBlock;
+      toggleSideNavEl.className = cssClass;
+      hideTemplateEl.style.display = this.displayNone;
+    } else {
+      toggleSideNavEl.style.display = this.displayBlock;
+      hideTemplateEl.style.display = this.displayNone;
+    }
+  };
+  membersHandler = () => {
+    console.log("hi");
     const toggleWork = document.querySelector(".portofolio-entrance__form");
     const hideTemplate = document.querySelector(".template-body");
-    if (
-      toggleWork.style.display === displayBlock &&
-      hideTemplate.style.display === displayNone
-    ) {
-      toggleWork.style.display = displayNone;
-      hideTemplate.style.display = displayBlock;
-    } else {
-      toggleWork.style.display = displayBlock;
-      hideTemplate.style.display = displayNone;
-    }
+
+    this.sideNavClickHandler(toggleWork, hideTemplate, "portofolio-entrance__");
+  };
+  ourWorkHandler = () => {
+    console.log("Hello");
+    const toggleWork = document.querySelector(".portofolio-entrance__form");
+    const hideTemplate = document.querySelector(".template-body");
+    this.sideNavClickHandler(
+      toggleWork,
+      hideTemplate,
+      "portofolio-entrance__form"
+    );
   };
   render() {
     const work = "Our Work";
+    const member = "Members";
     const list = document.createElement("li");
     list.className = "nav-item";
     list.textContent = this.name;
     if (this.name === work) {
       list.addEventListener("click", this.ourWorkHandler);
+    }
+    if (this.name === member) {
+      list.addEventListener("click", this.membersHandler);
     }
     return list;
   }
