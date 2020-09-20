@@ -1,3 +1,16 @@
+import HomeSection from "./HomeSection.js";
+import TeamSection from "./TeamMemberSection.js";
+import OurPortifolio from "./PortofolioSection.js";
+import ContactSection from "./ContactUs.js";
+import ServiceSection from "./ServiceSection.js";
+import AdviceSection from "./AdviceSection.js";
+
+$("header ul li a").on("click", function (e) {
+  e.preventDefault();
+  const href = $(this).attr("href");
+  $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
+});
+
 class AppRender {
   render() {
     const renderHook = document.querySelector(".app");

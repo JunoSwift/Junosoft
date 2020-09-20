@@ -1,42 +1,5 @@
-//HEADER
-class Logo {
-  constructor(logo) {
-    this.logo = logo;
-  }
-  render() {
-    const logoImage = document.createElement("div");
-    logoImage.className = "logo-image";
-    const img = document.createElement("img");
-    img.src = `${this.logo}`;
-    img.alt = `JunoSwift`;
-    img.className = "JunoSwift";
-    logoImage.append(img);
-    return logoImage;
-  }
-}
-class HeaderItem {
-  constructor(icon, itemName, itemLink) {
-    this.icon = icon;
-    this.itemName = itemName;
-    this.itemLink = itemLink;
-  }
-}
-class HeaderElement {
-  constructor(headerItem) {
-    this.headerItem = headerItem;
-  }
-  render() {
-    const iconName = this.headerItem.icon;
-    const headerElement = document.createElement("li");
-
-    headerElement.className = "header-list__element";
-    headerElement.innerHTML = `<a href = "#${this.headerItem.itemLink}"
-    <i class= ${iconName}> </i>
-      ${this.headerItem.itemName} </a>
-      `;
-    return headerElement;
-  }
-}
+import { HeaderItem, HeaderElement } from "./HeaderAssets.js";
+import Logo from "./Logo.js";
 
 class Header {
   items = [

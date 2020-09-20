@@ -1,4 +1,4 @@
-class Footer {
+export default class Footer {
   constructor(copyright) {
     this.copyright = copyright;
   }

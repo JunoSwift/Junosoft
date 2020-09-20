@@ -1,11 +1,12 @@
-class Advice {
-  constructor(adviceTitle, motoName) {
-    this.adviceTitle = adviceTitle;
-    this.motoName = motoName;
-  }
-}
+import { Advice } from "./ConstructorRender.js";
 
-class AdviceSection {
+$("section .advice-container button").on("click", function (e) {
+  e.preventDefault();
+  const href = $(this).attr("href");
+  $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
+});
+
+export default class AdviceSection {
   advice = new Advice(
     "Dou you have an app or idea you want to give life ",
     "It's all in our box"

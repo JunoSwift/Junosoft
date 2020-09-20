@@ -1,16 +1,6 @@
-class SideNavWork {
-  constructor(title) {
-    this.title = title;
-  }
-}
-
-class Works {
-  constructor(porfolioPhoto, porfolioName) {
-    this.porfolioPhoto = porfolioPhoto;
-    this.porfolioName = porfolioName;
-  }
-}
-class OurPortifolio {
+import { SectionHeader } from "./Utility/SectionHeader.js";
+import { SideNavWork, Works } from "./ConstructorRender.js";
+export default class OurPortifolio {
   works = [
     new Works("./assets/images/work/2 (1).jpg", "swiftmotion"),
     new Works("./assets/images/work/2 (2).jpg", "xjuno"),

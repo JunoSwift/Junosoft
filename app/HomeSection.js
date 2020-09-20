@@ -1,13 +1,12 @@
-class Home {
-  constructor(textMission, logoImage, ourWork) {
-    this.textMission = textMission;
-    this.logoImage = logoImage;
-    this.ourWork = ourWork;
-  }
-  render() {}
-}
+import { Home } from "./ConstructorRender.js";
 
-class HomeSection {
+$("section .app-mission button").on("click", function (e) {
+  e.preventDefault();
+  const href = $(this).attr("href");
+  $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
+});
+
+export default class HomeSection {
   home = new Home(
     "It all in our box",
     "./assets/images/junosoft.png",
@@ -15,7 +14,6 @@ class HomeSection {
   );
 
   render() {
-    const app = document.getElementById("app");
     const homeSection = document.createElement("section");
     homeSection.className = "section-container";
     homeSection.id = "home";

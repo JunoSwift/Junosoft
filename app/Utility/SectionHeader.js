@@ -1,4 +1,4 @@
-class SectionHeader {
+export class SectionHeader {
   constructor(sectionTittle, sectionSubtitle) {
     this.sectionTittle = sectionTittle;
     this.sectionSubtitle = sectionSubtitle;

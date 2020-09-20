@@ -159,6 +159,30 @@
 .template-body {
   display: block;
 }
+.add-new-member-form {
+  display: none;
+  width: 80%;
+  margin: 4rem auto;
+  padding: 2rem 0;
+  background-color: #fff;
+  box-shadow: 0.2px 0.2px 5px 5px rgba(12, 59, 102, 0.301);
+}
+
+.form-btn {
+  width: 100%;
+  margin: 0.2rem 0;
+  padding: 0.5rem 0.3rem;
+  border: 1px solid #00a5cf;
+  outline: none;
+}
+
+.form-btn {
+  width: 100%;
+  margin: 0.2rem 0;
+  padding: 0.5rem 0.3rem;
+  border: 1px solid #00a5cf;
+  outline: none;
+}
 /* TITLE HEADER */
 
 .title-header-container {

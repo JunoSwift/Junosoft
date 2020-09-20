@@ -1,12 +1,6 @@
-class Service {
-  constructor(serviceIcon, serviceName, serviceContent) {
-    this.serviceIcon = serviceIcon;
-    this.serviceName = serviceName;
-    this.serviceContent = serviceContent;
-  }
-}
-
-class ServiceSection {
+import { Service } from "./ConstructorRender.js";
+import { SectionHeaderWhite } from "./Utility/SectionHeaderWhite.js";
+export default class ServiceSection {
   services = [
     new Service(
       "'fa fa-2x fa-tty'",

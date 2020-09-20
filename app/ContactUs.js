@@ -1,12 +1,7 @@
-class Input {
-  constructor(name, inputType, valueType) {
-    this.name = name;
-    this.inputType = inputType;
-    this.valueType = valueType;
-  }
-}
-
-class ContactSection {
+import { Input } from "./ConstructorRender.js";
+import Footer from "./Utility/Footer.js";
+import { SectionHeader } from "./Utility/SectionHeader.js";
+export default class ContactSection {
   input = [
     new Input("Name", "text", ""),
     new Input("Email", "email", ""),
